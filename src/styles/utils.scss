@@ -1,0 +1,19 @@
+@use 'vars' as vars;
+
+@mixin on-tablet {
+  @media (min-width: vars.$w-tablet) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: vars.$w-desktop) {
+    @content;
+  }
+}
+
+@mixin on-desktop-large {
+  @media (min-width: vars.$w-desktop-large) {
+    @content;
+  }
+}

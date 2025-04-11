@@ -1,0 +1,17 @@
+@import 'vars';
+
+.button {
+  width: 140px;
+  height: 44px;
+  display: block;
+  margin: 0 auto;
+  background-color: $c-btn-primary;
+  color: $c-text-primary;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: $c-btn-disabled;
+  }
+}

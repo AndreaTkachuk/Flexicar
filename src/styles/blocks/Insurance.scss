@@ -1,0 +1,194 @@
+@use "../vars" as vars;
+@use "../utils" as utils;
+
+.insurance {
+  &__container {
+    border-top: 1px solid vars.$c-text-secondary;
+  }
+
+  &__content {
+    padding: 24px 0 16px;
+    background-color: vars.$c-bg-secondary;
+  }
+
+  &__stepper {
+    margin-bottom: 16px;
+    display: flex;
+
+    &__box {
+      position: relative;
+      z-index: 1;
+      width: 25%;
+      text-align: center;
+      font-size: 12px;
+      color: vars.$c-text-secondary;
+    }
+
+    &__indicator {
+      margin: 0 auto 7px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: vars.$c-indicator;
+        position: absolute;
+        top: 25%;
+        left: 0;
+      }
+
+      &__first {
+        margin: 0 auto 7px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 50%;
+          height: 1px;
+          background-color: vars.$c-btn-primary;
+          top: 25%;
+          left: 50%;
+          z-index: -1;
+        }
+      }
+
+      &__second {
+        margin: 0 auto 7px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $c-btn-primary;
+          top: 25%;
+          left: 0;
+        }
+      }
+
+      &__last {
+        margin: 0 auto 7px;
+
+        &::after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 50%;
+          height: 1px;
+          background-color: vars.$c-indicator;
+          top: 25%;
+          right: 50%;
+        }
+      }
+    }
+  }
+
+  &__car {
+    &__info {
+      display: flex;
+      gap: 16px;
+
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    &__img-box {
+      width: 72px;
+      height: 72px;
+    }
+
+    &__img {
+      width: 72px;
+      height: 72px;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    &__details {
+      &__capture {
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      &__similar {
+        font-size: 14px;
+        color: vars.$c-text-secondary;
+      }
+
+      &__rent {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__options {
+    padding: 32px 16px 80px;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__option {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: vars.$c-bg-secondary;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &__headers {
+      text-align: center;
+    }
+
+    &__type {
+      margin-bottom: 8px;
+    }
+
+    &__price {
+      font-weight: 500;
+      font-size: 24px;
+    }
+
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 14px;
+
+      &__item {
+        display: flex;
+        gap: 8px;
+      }
+    }
+
+    &__warning {
+      font-weight: 300;
+      font-size: 12px;
+      color: vars.$c-text-warning;
+    }
+
+    &.added {
+      background-color: vars.$c-btn-primary;
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

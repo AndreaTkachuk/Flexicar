@@ -1,3 +1,26 @@
+@import 'vars';
+@import 'icon';
+@import 'button';
+@import './blocks/Header';
+@import './blocks/Dropdown';
+@import './blocks/Nav';
+@import './blocks/Hero';
+@import './blocks/Contact';
+@import './blocks/Footer';
+@import './blocks/Extras';
+@import './blocks/Insurance';
+@import './blocks/Confirm';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  background-color: $c-bg-page;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: $c-text-primary;
 }
+

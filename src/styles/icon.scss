@@ -1,0 +1,138 @@
+.icon {
+  display: block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--burger {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons/icon-burger-menu.svg');
+  }
+
+  &--phone {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons/icon-phone.svg');
+  }
+
+  &--arrow-down {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons/icon-chevron-down.svg');
+  }
+
+  &--log-in {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons/icon-log-in.svg');
+  }
+
+  &--ok {
+    background-image: url('../assets/icons/check-circle-broken.svg');
+  }
+
+  &--ok-green {
+    background-image: url('../assets/icons/check-circle-green.svg');
+  }
+
+  &--doors {
+    background-image: url('../assets/icons/icon-car-doors.svg');
+  }
+
+  &--luggage {
+    background-image: url('../assets/icons/luggage-01.svg');
+  }
+
+  &--gearbox {
+    background-image: url('../assets/icons/icon-gearbox.svg');
+  }
+
+  &--passengers {
+    background-image: url('../assets/icons/users-01.svg');
+  }
+
+  &--indicator {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons/Indicator.svg');
+  }
+
+  &--indicator-active {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons/Indicator-active.svg');
+  }
+
+  &--indicator-done {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons/Indicator-done.svg');
+  }
+
+  &--infinity {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/infinity.svg');
+  }
+
+  &--plus {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/plus.svg');
+  }
+
+  &--minus {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/minus.svg');
+  }
+
+  &--global {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/globe-05.svg');
+  }
+
+  &--tank {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/icon-petrol.svg');
+  }
+
+  &--childseat {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/icon-babyseat.svg');
+  }
+
+  &--nav {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/navigation-pointer-01.svg');
+  }
+
+  &--wifi {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/wifi.svg');
+  }
+
+  &--driver {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/Icon-driver.svg');
+  }
+
+  &--headphones {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/headphones-01.svg');
+  }
+
+  &--alert {
+    background-image: url('../assets/icons/alert-circle.svg');
+  }
+}

@@ -1,0 +1,72 @@
+@use "../vars" as vars;
+@use "../utils" as utils;
+
+.contact {
+  background-image: url("../assets/images/hyundai-100.jpg");
+  background-size: 380%;
+  background-position: 36% 70%;
+  background-repeat: no-repeat;
+  padding: 80px 16px;
+
+  @include utils.on-tablet {
+    background-size: 200%;
+    background-position: 18% 70%;
+  }
+
+  @include utils.on-desktop-large {
+    background-size: 150%;
+    background-position: 10% 66%;
+  }
+
+  &__content {
+    padding: 32px 32px 40px;
+    max-width: 1464px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 32px 0 8px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__text {
+    margin: 0 0 32px;
+  }
+
+  &__avatars {
+    width: 150px;
+    margin: 0 auto;
+    display: flex;
+
+    @include utils.on-tablet {
+      position: relative;
+      margin: 0;
+      left: -2%;
+    }
+
+    @include utils.on-desktop-large {
+      left: -1%;
+    }
+
+    & :nth-child(1) {
+      left: 65%;
+    }
+
+    & :nth-child(3) {
+      left: -65%;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    width: 56px;
+    height: 56px;
+  }
+
+  &__button {
+    @include utils.on-tablet {
+      margin: 0;
+    }
+  }
+}

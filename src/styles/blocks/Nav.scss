@@ -1,0 +1,41 @@
+@use "../vars" as vars;
+@use "../utils" as utils;
+
+.nav {
+  display: none;
+
+  &__list {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    @include utils.on-desktop-large {
+      gap: 24px;
+    }
+  }
+
+  &--footer {
+    display: block;
+
+    .nav__list {
+      padding: 0;
+      justify-content: start;
+    }
+  }
+
+  @include utils.on-desktop {
+    display: block;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $c-text-secondary;
+  }
+}

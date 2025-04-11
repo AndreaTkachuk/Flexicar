@@ -1,0 +1,60 @@
+@use "../vars" as vars;
+@use "../utils" as utils;
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+
+  &__trigger {
+    width: 86px;
+    height: 40px;
+    border: none;
+    background-color: $c-bg-secondary;
+    color: $c-text-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  &__content {
+    width: 100%;
+    position: absolute;
+    background-color: vars.$c-bg-secondary;
+
+    overflow: hidden;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition:
+      height 0.2s,
+      opacity 0.2s,
+      transform 0.2s;
+  }
+
+  &--active .dropdown__content {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__item {
+    color: $c-text-secondary;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      background-color: $c-bg-page;
+    }
+  }
+}

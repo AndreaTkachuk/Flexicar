@@ -1,0 +1,80 @@
+@use "../vars" as vars;
+@use "../utils" as utils;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: vars.$c-bg-secondary;
+  height: 52px;
+  padding-inline: 16px;
+
+  @include utils.on-tablet {
+    height: 72px;
+  }
+
+  @include utils.on-desktop {
+    padding-inline: 40px;
+  }
+
+  &__logo-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include utils.on-desktop-large {
+      gap: 84px;
+    }
+  }
+
+  &__menu-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__lang {
+    display: none;
+
+    @include utils.on-desktop {
+      display: block;
+    }
+  }
+
+  &__phone {
+    &__box {
+      display: none;
+
+      @include utils.on-tablet {
+        display: flex;
+        gap: 4px;
+      }
+    }
+
+    &__number {
+      text-decoration: none;
+      color: vars.$c-text-secondary;
+    }
+  }
+
+  &__log-in {
+    display: none;
+    text-decoration: none;
+    color: vars.$c-text-secondary;
+
+    @include utils.on-desktop {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+
+  &__burger-menu {
+    width: 44px;
+    height: 44px;
+
+    @include utils.on-desktop {
+      display: none;
+    }
+  }
+}
