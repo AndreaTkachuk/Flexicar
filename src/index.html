@@ -45,7 +45,7 @@
       </div>
       <div class="header__menu-group">
         <div class="header__lang">
-          <div class="dropdown">
+          <div class="dropdown dropdown--lang">
             <button class="dropdown__trigger">
               <span class="dropdown__trigger__text">EN</span>
               <div class="dropdown__trigger__icon icon icon--arrow-down"></div>
@@ -328,19 +328,22 @@
                   <p class="insurance__option__price">Free</p>
                 </div>
                 <ul class="insurance__option__list">
-                  <span class="insurance__option__list__capture">Important Notice:</span>
+                  <span class="insurance__option__list__capture">
+                    Important Notice:
+                  </span>
                   <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--alert"></span>
+                    <span
+                      class="insurance__option__icon icon icon--alert"
+                    ></span>
                     <span>
-                      You are fully responsible for any damage to the
-                      vehicle.
+                      You are fully responsible for any damage to the vehicle.
                     </span>
                   </li>
                   <li class="insurance__option__list__item">
                     <span class="icon icon--alert"></span>
                     <span>
-                      Full repair costs will be charged in case of
-                      an accident or damage (no financial limit).
+                      Full repair costs will be charged in case of an accident
+                      or damage (no financial limit).
                     </span>
                   </li>
                 </ul>
@@ -357,21 +360,29 @@
                 </div>
                 <ul class="insurance__option__list">
                   <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
+                    <span
+                      class="insurance__option__icon icon icon--ok-green"
+                    ></span>
                     <span>
-                      Coverage for vehicle damage in case of an accident (with excess).
+                      Coverage for vehicle damage in case of an accident (with
+                      excess).
                     </span>
                   </li>
                   <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
+                    <span
+                      class="insurance__option__icon icon icon--ok-green"
+                    ></span>
                     <span>
                       Limited financial liability with a deductible/excess.
                     </span>
                   </li>
                   <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
+                    <span
+                      class="insurance__option__icon icon icon--ok-green"
+                    ></span>
                     <span>
-                      Partial coverage for car body damages (does not cover tires, windows, roof, or undercarriage).
+                      Partial coverage for car body damages (does not cover
+                      tires, windows, roof, or undercarriage).
                     </span>
                   </li>
                 </ul>
@@ -384,25 +395,30 @@
                 </div>
                 <ul class="insurance__option__list">
                   <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
+                    <span
+                      class="insurance__option__icon icon icon--ok-green"
+                    ></span>
                     <span>
-                      Full coverage for all damages (including tires, windows, roof, and undercarriage).
+                      Full coverage for all damages (including tires, windows,
+                      roof, and undercarriage).
                     </span>
                   </li>
                   <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      Theft protection.
-                    </span>
+                    <span
+                      class="insurance__option__icon icon icon--ok-green"
+                    ></span>
+                    <span> Theft protection. </span>
                   </li>
                   <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      No deductible/excess (or minimal excess).
-                    </span>
+                    <span
+                      class="insurance__option__icon icon icon--ok-green"
+                    ></span>
+                    <span> No deductible/excess (or minimal excess). </span>
                   </li>
                   <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
+                    <span
+                      class="insurance__option__icon icon icon--ok-green"
+                    ></span>
                     <span>
                       Roadside assistance in case of breakdowns or accidents.
                     </span>
@@ -444,98 +460,112 @@
                 <p class="confirm__stepper__indicator__text">Payment</p>
               </div>
             </div>
-
           </div>
-          <div class="insurance__options">
-            <h4 class="insurance__options__title">Confirming Order</h4>
-            <div class="insurance__options__box">
-              <div class="insurance__option">
-                <div class="insurance__option__headers">
-                  <p class="insurance__option__type">No Insurance</p>
-                  <p class="insurance__option__price">Free</p>
-                </div>
-                <ul class="insurance__option__list">
-                  <span class="insurance__option__list__capture">Important Notice:</span>
-                  <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--alert"></span>
-                    <span>
-                      You are fully responsible for any damage to the
-                      vehicle.
-                    </span>
-                  </li>
-                  <li class="insurance__option__list__item">
-                    <span class="icon icon--alert"></span>
-                    <span>
-                      Full repair costs will be charged in case of
-                      an accident or damage (no financial limit).
-                    </span>
-                  </li>
-                </ul>
-                <p class="insurance__option__warning">
-                  We strongly recommend choosing one of the insurance options to
-                  ensure a worry-free journey.
-                </p>
+          <div class="confirm__options">
+            <h4 class="confirm__options__title">Confirming Order</h4>
+            <div class="confirm__options__box">
+              <div class="confirm__option">
+                <label for="confirm-name" class="confirm__label">
+                  <span>First Name </span><span class="confirm__star">*</span>
+                </label>
+                <input
+                  id="confirm-name"
+                  class="confirm__input"
+                  type="text"
+                  placeholder="Enter Your First Name"
+                />
               </div>
 
-              <div class="insurance__option">
-                <div class="insurance__option__headers">
-                  <p class="insurance__option__type">Basic Insurance</p>
-                  <p class="insurance__option__price">15 EUR/day</p>
-                </div>
-                <ul class="insurance__option__list">
-                  <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      Coverage for vehicle damage in case of an accident (with excess).
-                    </span>
-                  </li>
-                  <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      Limited financial liability with a deductible/excess.
-                    </span>
-                  </li>
-                  <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      Partial coverage for car body damages (does not cover tires, windows, roof, or undercarriage).
-                    </span>
-                  </li>
-                </ul>
+              <div class="confirm__option">
+                <label for="confirm-lastname" class="confirm__label">
+                  <span>Last Name </span><span class="confirm__star">*</span>
+                </label>
+                <input
+                  id="confirm-lastname"
+                  class="confirm__input"
+                  type="text"
+                  placeholder="Enter Your Last Name"
+                />
               </div>
 
-              <div class="insurance__option">
-                <div class="insurance__option__headers">
-                  <p class="insurance__option__type">Comprehensive Insurance</p>
-                  <p class="insurance__option__price">25 EUR/day</p>
+              <div class="confirm__option confirm__option--phone">
+                <label for="confirm-phone" class="confirm__label">
+                  <span>Phone number </span><span class="confirm__star">*</span>
+                </label>
+                <input
+                  id="confirm-phone"
+                  class="confirm__input"
+                  type="tel"
+                  placeholder="+1 (555) 000-0000"
+                />
+                <div class="dropdown dropdown--phone">
+                  <button class="dropdown__trigger">
+                    <span class="dropdown__trigger__text">US</span>
+                    <div class="dropdown__trigger__icon icon icon--arrow-down"></div>
+                  </button>
+
+                  <div class="dropdown__content">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item" data-value="US">US</li>
+                      <li class="dropdown__item" data-value="UA">UA</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul class="insurance__option__list">
-                  <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      Full coverage for all damages (including tires, windows, roof, and undercarriage).
-                    </span>
-                  </li>
-                  <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      Theft protection.
-                    </span>
-                  </li>
-                  <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      No deductible/excess (or minimal excess).
-                    </span>
-                  </li>
-                  <li class="insurance__option__list__item">
-                    <span class="insurance__option__icon icon icon--ok-green"></span>
-                    <span>
-                      Roadside assistance in case of breakdowns or accidents.
-                    </span>
-                  </li>
-                </ul>
               </div>
+
+              <div class="confirm__option">
+                <label for="confirm-email" class="confirm__label">
+                  <span>Email </span><span class="confirm__star">*</span>
+                </label>
+                <input
+                  id="confirm-email"
+                  class="confirm__input"
+                  type="email"
+                  placeholder="olivia@untitledui.com"
+                />
+              </div>
+
+              <div class="confirm__option">
+                <div class="confirm__summary">
+                  <div class="confirm__total__list">
+                    <li class="confirm__total__list__item">
+                      <span>Date</span>
+                      <span>Date!!!</span>
+                    </li>
+                    <li class="confirm__total__list__item">
+                      <span>Location</span>
+                      <span>Location</span>
+                    </li>
+                    <li class="confirm__total__list__item">
+                      <span>Volkswagen Touareg</span>
+                      <span>32,98 EUR</span>
+                    </li>
+                    <li class="confirm__total__list__item">
+                      <span>Basic Insurance</span>
+                      <span>15 EUR</span>
+                    </li>
+                  </div>
+                  <div class="confirm__separator"></div>
+                  <div class="confirm__total">
+                    <span>Total</span>
+                    <span>62,98 EUR</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="confirm__option">
+                <div class="confirm__terms">
+                  <input
+                    type="checkbox"
+                    id="confirm-terms"
+                    class="confirm__checkbox"
+                  />
+                  <label for="confirm-terms" class="confirm__terms__label">
+                    I accept the terms & conditions
+                  </label>
+                </div>
+              </div>
+
             </div>
             <button class="insurance__button button">Continue</button>
           </div>

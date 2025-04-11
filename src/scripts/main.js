@@ -2,9 +2,11 @@
 
 // import { clickDropdown } from './utils.js';
 
-const dropdownLang = document.querySelector('.dropdown');
+const dropdownLang = document.querySelector('.dropdown--lang');
+const dropdownPhone = document.querySelector('.dropdown--phone');
 
 clickDropdown(dropdownLang);
+clickDropdown(dropdownPhone);
 
 function clickDropdown(dropdown) {
   const trigger = dropdown.querySelector('.dropdown__trigger');
