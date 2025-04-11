@@ -12,7 +12,7 @@ function clickDropdown(dropdown) {
   const content = dropdown.querySelector('.dropdown__content');
   const initialHeight = content.clientHeight;
 
-  content.style.height = '0';
+  content.style.height = '0px';
   content.style.opacity = '1';
   content.style.transform = 'translateY(0)';
   content.style.pointerEvent = 'auto';

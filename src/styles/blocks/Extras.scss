@@ -129,6 +129,7 @@
 
       @include utils.on-desktop-large {
         grid-template-columns: repeat(9, 1fr);
+        gap: 24px 16px;
       }
     }
 
