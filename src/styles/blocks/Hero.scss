@@ -20,6 +20,10 @@
     @include utils.on-desktop {
       display: flex;
     }
+
+    &__text {
+      color: #919192;
+    }
   }
 
   &__card {
