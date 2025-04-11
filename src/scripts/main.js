@@ -92,3 +92,31 @@ insuranceOptions.forEach((option) => {
     });
   });
 });
+
+const hero = document.querySelector('#hero');
+const extras = document.querySelector('#extras');
+const insurance = document.querySelector('#insurance');
+const confirmBtn = document.querySelector('#confirm');
+
+document.querySelector('.hero__button').addEventListener('click', () => {
+  hero.classList.add('hidden');
+  extras.classList.remove('hidden');
+});
+
+document.querySelector('.extras__button').addEventListener('click', () => {
+  extras.classList.add('hidden');
+  insurance.classList.remove('hidden');
+});
+
+document.querySelector('.insurance__button').addEventListener('click', () => {
+  insurance.classList.add('hidden');
+  confirmBtn.classList.remove('hidden');
+});
+
+document.querySelector('.confirm__button__fin')
+  .addEventListener('click', () => {
+    confirmBtn.classList.add('hidden');
+    hero.classList.remove('hidden');
+    // eslint-disable-next-line no-undef
+    alert('Thanks for your order!');
+  });

@@ -76,7 +76,7 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero__content">
           <div class="hero__image">
             <img
@@ -125,11 +125,11 @@
                 <span>5 Passengers</span>
               </div>
             </div>
-            <button class="hero__button button">Proceed to Booking</button>
           </div>
         </div>
+        <button class="hero__button button">Proceed to Booking</button>
       </section>
-      <aside id="extras" class="extras">
+      <aside id="extras" class="extras hidden">
         <div class="extras__container">
           <div class="extras__content">
             <div class="extras__stepper">
@@ -273,7 +273,7 @@
         </div>
       </aside>
 
-      <aside id="insurance" class="insurance">
+      <aside id="insurance" class="insurance hidden">
         <div class="insurance__container">
           <div class="insurance__content">
             <div class="insurance__stepper">
@@ -431,7 +431,7 @@
         </div>
       </aside>
 
-      <aside id="confirm" class="confirm">
+      <aside id="confirm" class="confirm hidden">
         <div class="confirm__container">
           <div class="confirm__content">
             <div class="confirm__stepper">
@@ -555,19 +555,23 @@
 
               <div class="confirm__option">
                 <div class="confirm__terms">
-                  <input
-                    type="checkbox"
-                    id="confirm-terms"
-                    class="confirm__checkbox"
-                  />
-                  <label for="confirm-terms" class="confirm__terms__label">
+
+                  <label class="confirm__terms__label">
                     I accept the terms & conditions
+                    <input
+                      type="checkbox"
+                      class="confirm__checkbox"
+                    />
+                    <span class="checkmark"></span>
                   </label>
                 </div>
               </div>
 
             </div>
-            <button class="insurance__button button">Continue</button>
+            <button class="confirm__button confirm__button__first button" disabled>
+              Pay Cash
+            </button>
+            <button class="confirm__button confirm__button__fin button">Pay Now</button>
           </div>
         </div>
       </aside>
