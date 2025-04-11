@@ -4,11 +4,19 @@
 .insurance {
   &__container {
     border-top: 1px solid vars.$c-text-secondary;
+
+    @include utils.on-desktop {
+      // border: none;
+    }
   }
 
   &__content {
     padding: 24px 0 16px;
     background-color: vars.$c-bg-secondary;
+
+    @include utils.on-desktop {
+      display: none;
+    }
   }
 
   &__stepper {
@@ -129,11 +137,24 @@
   &__options {
     padding: 32px 16px 80px;
 
+    @include utils.on-desktop {
+      padding: 16px 0 0;
+    }
+
     &__box {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin-bottom: 32px;
+
+      @include utils.on-tablet {
+        flex-direction: row;
+        gap: 16px;
+      }
+
+      @include utils.on-desktop {
+        margin-bottom: 0;
+      }
     }
 
     &__title {
@@ -147,7 +168,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background-color: vars.$c-bg-secondary;
+    background-color: vars.$c-indicator;
     border-radius: 8px;
     cursor: pointer;
 
@@ -190,5 +211,13 @@
 
   &__button {
     width: 100%;
+
+    @include utils.on-tablet {
+      max-width: 210px;
+    }
+
+    @include utils.on-desktop {
+      display: none;
+    }
   }
 }

@@ -2,8 +2,36 @@
 @use "../utils" as utils;
 
 .hero {
-  &__content {
+  @include utils.on-desktop {
     max-width: 1464px;
+    padding: 64px 16px 120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 24px;
+  }
+
+  &__navigation {
+    grid-column: 1 / 9;
+    display: none;
+    align-items: center;
+    gap: 4px;
+
+    @include utils.on-desktop {
+      display: flex;
+    }
+  }
+
+  &__card {
+    @include utils.on-desktop {
+      grid-column: 1 / 7;
+      padding: 48px 24px;
+      background-color: vars.$c-bg-secondary;
+      border-radius: 16px;
+    }
+  }
+
+  &__content {
     padding: 16px;
     margin: 0 auto;
 
@@ -11,7 +39,6 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
-      padding: 32px 32px 0;
     }
   }
 
@@ -62,12 +89,13 @@
       &__title {
         font-weight: 500;
         font-size: 18px;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
 
       &__item {
         display: flex;
         gap: 8px;
+        margin-bottom: 8px;
       }
     }
   }
@@ -88,11 +116,15 @@
   }
 
   &__button {
-    width: 100%;
+    width: 94%;
     margin-bottom: 80px;
 
     @include utils.on-tablet {
       width: 197px;
+    }
+
+    @include utils.on-desktop {
+      display: none;
     }
   }
 }

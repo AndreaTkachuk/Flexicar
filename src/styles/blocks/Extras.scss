@@ -9,6 +9,10 @@
   &__content {
     padding: 24px 0 16px;
     background-color: vars.$c-bg-secondary;
+
+    @include utils.on-desktop {
+      display: none;
+    }
   }
 
   &__stepper {
@@ -113,11 +117,19 @@
   &__options {
     padding: 32px 16px 80px;
 
+    @include utils.on-desktop {
+      padding: 16px 0 10px;
+    }
+
     &__box {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
       margin-bottom: 32px;
+
+      @include utils.on-desktop-large {
+        grid-template-columns: repeat(9, 1fr);
+      }
     }
 
     &__title {
@@ -133,9 +145,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: vars.$c-bg-secondary;
+    background-color: vars.$c-indicator;
     border-radius: 8px;
     cursor: pointer;
+
+    @include utils.on-desktop-large {
+      grid-column: span 3;
+    }
 
     &::after {
       position: absolute;
@@ -147,6 +163,30 @@
       opacity: 0.1;
       width: 36px;
       background-color: #fff;
+    }
+
+    &__description {
+      @include utils.on-tablet {
+        position: relative;
+        padding-left: 16px;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          background-color: vars.$c-text-secondary;
+        }
+      }
+    }
+
+    &__left {
+      @include utils.on-tablet {
+        display: flex;
+        gap: 8px;
+      }
     }
 
     &__icon {
@@ -162,6 +202,10 @@
     &__price {
       font-weight: 600;
       margin-bottom: 8px;
+
+      @include utils.on-tablet {
+        margin-bottom: 0;
+      }
     }
 
     &.added {
@@ -171,5 +215,13 @@
 
   &__button {
     width: 100%;
+
+    @include utils.on-tablet {
+      max-width: 210px;
+    }
+
+    @include utils.on-desktop {
+      display: none;
+    }
   }
 }

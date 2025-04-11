@@ -1,13 +1,12 @@
 'use strict';
 
-// import { clickDropdown } from './utils.js';
-
 const dropdownLang = document.querySelector('.dropdown--lang');
 const dropdownPhone = document.querySelector('.dropdown--phone');
 
 clickDropdown(dropdownLang);
 clickDropdown(dropdownPhone);
 
+// Function to handle dropdown click events
 function clickDropdown(dropdown) {
   const trigger = dropdown.querySelector('.dropdown__trigger');
   const content = dropdown.querySelector('.dropdown__content');
@@ -51,6 +50,7 @@ function clickDropdown(dropdown) {
 
 const extrasOptions = document.querySelectorAll('.extras__option');
 
+// Add event listeners to each extras option
 extrasOptions.forEach((option) => {
   option.addEventListener('click', () => {
     const icon = option.querySelector('.icon--plus, .icon--minus');
@@ -69,6 +69,7 @@ extrasOptions.forEach((option) => {
 
 const insuranceOptions = document.querySelectorAll('.insurance__option');
 
+// Add event listeners to each insurance option
 insuranceOptions.forEach((option) => {
   option.addEventListener('click', () => {
     insuranceOptions.forEach((otherOption) => {
@@ -96,9 +97,12 @@ insuranceOptions.forEach((option) => {
 const hero = document.querySelector('#hero');
 const extras = document.querySelector('#extras');
 const insurance = document.querySelector('#insurance');
-const confirmBtn = document.querySelector('#confirm');
+const confirmBlock = document.querySelector('#confirm');
+const heroButton = document.querySelector('.hero__button');
 
-document.querySelector('.hero__button').addEventListener('click', () => {
+// Show/hide elements based on the initial width of the window
+heroButton.addEventListener('click', () => {
+  heroButton.classList.add('hidden');
   hero.classList.add('hidden');
   extras.classList.remove('hidden');
 });
@@ -110,13 +114,42 @@ document.querySelector('.extras__button').addEventListener('click', () => {
 
 document.querySelector('.insurance__button').addEventListener('click', () => {
   insurance.classList.add('hidden');
-  confirmBtn.classList.remove('hidden');
+  confirmBlock.classList.remove('hidden');
 });
 
 document.querySelector('.confirm__button__fin')
   .addEventListener('click', () => {
-    confirmBtn.classList.add('hidden');
-    hero.classList.remove('hidden');
+    if (window.innerWidth < 1024) {
+      confirmBlock.classList.add('hidden');
+      hero.classList.remove('hidden');
+      heroButton.classList.remove('hidden');
+    }
     // eslint-disable-next-line no-undef
     alert('Thanks for your order!');
   });
+
+// Show/hide elements based on the initial width of the window
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth >= 1024) {
+    extras.classList.remove('hidden');
+    insurance.classList.remove('hidden');
+    confirmBlock.classList.remove('hidden');
+  }
+});
+
+// Check the width of the window and show/hide elements accordingly
+function checkWidth() {
+  const asides = document.querySelectorAll('aside');
+
+  asides.forEach((aside) => {
+    if (window.innerWidth >= 1024) {
+      aside.classList.remove('hidden');
+      heroButton.classList.add('hidden');
+    } else {
+      aside.classList.add('hidden');
+      heroButton.classList.remove('hidden');
+    }
+  });
+}
+
+window.addEventListener('resize', checkWidth);
